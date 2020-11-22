@@ -1,2 +1,5 @@
 https://blog.developer.atlassian.com/creating-a-jira-cloud-issue-in-a-single-rest-call/
 
+
+
+curl -D- -u devops.mar1.2019@gmail.com:wlhokM24ZGIjjYwNXxKXDC67 -X GET -H "Content-Type: application/json" https://devopsmar12019.atlassian.net/rest/api/latest/issue/QUIC-3/transitions 
