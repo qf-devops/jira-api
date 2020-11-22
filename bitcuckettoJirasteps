@@ -1,0 +1,3 @@
+1. webhook
+2. extract jira tickets from comments.  --> lambda function ==> json ==> read data
+3. prepate rest call to update jira status.
