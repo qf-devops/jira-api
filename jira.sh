@@ -14,12 +14,12 @@ curl --request POST \
         "comment": [
             {
                 "add": {
-                    "body": "$MESSAGE"
+                    "body": "'"${MESSAGE}"'"
                 }
             }
         ]
     },
     "transition": {
-        "id": "$TRANSID"
+        "id": "'"${TRANSID}"'"
     }
 }'
