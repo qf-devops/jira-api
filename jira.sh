@@ -17,6 +17,6 @@ curl --request POST \
         ]
     },
     "transition": {
-        "id": "21"
+        "id": "31"
     }
 }'
