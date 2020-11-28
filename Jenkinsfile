@@ -18,6 +18,8 @@ echo "Branch Not Matched "
 } 
 } 
 stage('Jira Update') { 
-sh "jira.sh" 
+ withCredentials([usernamePassword(credentialsId: 'jira_cred', passwordVariable: 'password', usernameVariable: 'username')]) {
+	    sh 'sh jira.sh "$username" "$password"'
+	    }
 } 
 }
