@@ -26,6 +26,8 @@ curl --request POST \
     }
 }'
 }
+JIRA_USER="${1}"
+JIRA_PASS="${2}"
 a=$(git log -1 --pretty=%B|head -1)
 y=$(echo $a | awk '{print $4}')
 z=$(echo $a | awk '{print $6}')
@@ -40,6 +42,6 @@ rawjid=$(echo $i | jq -r '.commit.message')
 if [[ $rawjid == *":"* ]]; then
   jid=$(echo $rawjid | awk -F ':' '{print $1}')
   jmessage=$(echo $rawjid | awk -F ':' '{print $2}')
-  update_status(jid,jmessage)
+  update_status $JIRA_USER $JIRA_PASS $jid $jmessage
 fi
 done
