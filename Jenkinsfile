@@ -19,7 +19,7 @@ echo "Branch Not Matched "
 } 
 stage('Jira Update') { 
  withCredentials([usernamePassword(credentialsId: 'jira_cred', passwordVariable: 'jpassword', usernameVariable: 'jusername')]) {
-	    sh '/usr/bin/sudo -u jenkins -i bash -c 'echo -n "E:"; jirav1.sh "$jusername" "$jpassword"'
+	    sh '/usr/bin/sudo -u jenkins -i bash -c 'echo -n "E:"; ./jirav1.sh "$jusername" "$jpassword"'
 	    }
 } 
 }
