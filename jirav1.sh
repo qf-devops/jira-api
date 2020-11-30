@@ -44,10 +44,8 @@ fi
 echo "$prid  $br $TRANSID"
 commits=$(curl -X GET -u 'devops.july2.2017@gmail.com': 92176f1fa9deb9fb4de1d6c11d30c492a5f7145e https://api.github.com/repos/quickfixtech/jira-api/pulls/$prid/commits)
 echo "$commits">file.json
-#jq -r '.commit' file.json
-/usr/bin/jq -c '.[]' file.json | while read i; do
-#     do stuff with $i
-rawjid=$(echo $i | /usr/bin/jq -r '.commit.message')
+/usr/local/bin/jq -c '.[]' file.json | while read i; do
+  rawjid=$(echo $i | /usr/local/bin/jq -r '.commit.message')
 if [[ $rawjid == *":"* ]]; then
   jid=$(echo $rawjid | awk -F ':' '{print $1}')
   jmessage=$(echo $rawjid | awk -F ':' '{print $2}')
