@@ -34,9 +34,9 @@ y=$(echo $a | awk '{print $4}')
 z=$(echo $a | awk '{print $6}')
 prid=$(echo ${y//#})
 br=$(echo $z | awk -F '/' '{print $2}')
-if [[ $br == "release" ]]; then
+if [ $br == "release" ]; then
     TRANSID="21"
-elif [[ $br == "master" ]]; then
+elif [ $br == "master" ]; then
     TRANSID="31"
 else
    TRANSID="21"
