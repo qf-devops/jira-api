@@ -1,3 +1,4 @@
+curl -X GET https://bitbucket.org/api/2.0/repositories/devopsmar12019/core/pullrequests/2 > txt
 
 add commentjira:
  https://jenkinsci.github.io/jira-steps-plugin/steps/comment/jira_add_comment/
