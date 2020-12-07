@@ -1,3 +1,7 @@
+
+add commentjira:
+ https://jenkinsci.github.io/jira-steps-plugin/steps/comment/jira_add_comment/
+
 https://blog.developer.atlassian.com/creating-a-jira-cloud-issue-in-a-single-rest-call/
 
 
