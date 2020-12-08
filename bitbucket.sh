@@ -7,4 +7,5 @@ cat pr_get.json|/usr/local/bin/jq -r '.description' > msg.txt
 oldIFS="$IFS"
 IFS=$'\n' arr=($(<msg.txt))
 IFS="$oldIFS"
-echo "${arr[2]}"
+echo "${arr[1]}"
+(IFS=','; for word in ${arr[1]}; do echo "$word"; done)
